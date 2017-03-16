@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>{% block title %}{% endblock title %}Site Name</title>
+        <title>{% block title %}{% endblock title %}</title>
 
         <meta http-equiv="X-UA-Compatible" content="chrome=IE7" />
 
@@ -12,11 +12,41 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
         <link rel="stylesheet" href="{% static 'css/screen.css' %}" media="screen, projection"/>
+        <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'bootstrap/css/bootstrap.css' %}" rel="stylesheet">
 
         {% block extra_head %}{% endblock extra_head %}
 
     </head>
     <body id="{% block body_id %}{% endblock %}" class="{% block body_class %}{% endblock %}">
-        {% block content %}{% endblock content %}
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="">42 Coffee Cups test</a>
+        {% block links %}{% endblock %}
+        </div>
+       
+        <div id="navbar" class="navbar-collapse collapse">          
+          <form  class="navbar-form navbar-right" method="post">            
+            <div class="form-group">
+              <input type="text" placeholder="Nick name" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+            <a href="" class="btn btn-success">Registred</a>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+    <div class="my_div">
+      <p><strong>Name</strong> : Illya</p>
+      <p><strong>Surname</strong> : Babiy</p>
+      <p><strong>Email</strong> : sen9aaa@gmail.com</p>
+      <p><strong>About me</strong> : live in Lviv</p>
+      <p><strong>Date of birth</strong> : 02.08.1990</p>
+    </div>
     </body>
 </html>
+
