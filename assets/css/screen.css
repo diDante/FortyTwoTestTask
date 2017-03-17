@@ -1,5 +1,16 @@
 .my_div {
-	margin-top: 65px;
-	margin-left: 40px;
+	line-height: 25px;
 	font-size: 20px;
+	margin-left:15px;
+	float: left;
+	width: 500px;
+	height: 500px
+}
+.my_div_1{
+	font-size: 20px;
+	line-height: 25px;
+}
+.contact{
+	margin-top: 50px;
+	margin-left:515px;
 }
